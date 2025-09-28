@@ -24,9 +24,9 @@ public class UserController {
                 .body(created);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<UserResponseDTO>updateUser(@PathVariable UUID id, @Valid @RequestBody UserDTO userDTO){
-        UserResponseDTO update = userService.updateUser(id,userDTO);
+    @PutMapping("/{id}/Contact")
+    public ResponseEntity<UserResponseDTO>updateUser(@PathVariable UUID id, @Valid @RequestBody UpdateContactRequest updateContactRequest){
+        UserResponseDTO update = userService.updateUser(id,updateContactRequest);
         return ResponseEntity.status(HttpStatus.OK)
                 .body(update);
     }
