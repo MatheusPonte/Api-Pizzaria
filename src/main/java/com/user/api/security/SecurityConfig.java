@@ -22,8 +22,9 @@ public class SecurityConfig {
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST, "/users").permitAll()
+                        .requestMatchers(HttpMethod.PUT,"/users/{id}/Contact").permitAll()
                         .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/actuator/health").permitAll()
-                        .anyRequest().authenticated()
+                        .anyRequest().permitAll()
                 )
                 .httpBasic(Customizer.withDefaults())
                 .build();
