@@ -32,7 +32,8 @@ public class User {
 
     @Column(nullable = false)
     private String password;
-    @Embedded
+
+    @Column(length = 255)
     private String address;
 
     @Column(length = 20)

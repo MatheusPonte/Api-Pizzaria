@@ -1,0 +1,23 @@
+services:
+  db-pizzaria:
+    container_name: db-pizzaria
+    image: postgres:16-alpine
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${HOMOLOG_DB_USERNAME}
+      POSTGRES_PASSWORD: ${HOMOLOG_DB_PASSWORD}
+      POSTGRES_DB: ${APPLICATION_NAME}
+    ports:
+      - "6000:5432"
+
+  pizzaria:
+    container_name: pizzaria
+    build:
+      context: .
+    depends_on:
+      - db-pizzaria
+    env_file:
+      - .env
+    ports:
+      - "${HOMOLOG_SERVER_PORT}:${HOMOLOG_SERVER_PORT}"
