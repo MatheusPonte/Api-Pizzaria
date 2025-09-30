@@ -1,7 +1,13 @@
-package com.user.api.user;
+package com.user.api.user.service;
 
 import com.user.api.auth.Auth;
 import com.user.api.exception.EmailAlreadyUse;
+import com.user.api.user.DTO.UpdateContactRequest;
+import com.user.api.user.DTO.UserDTO;
+import com.user.api.user.DTO.UserResponseDTO;
+import com.user.api.user.entity.User;
+import com.user.api.user.enums.UserRole;
+import com.user.api.user.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -43,6 +49,11 @@ public class UserService {
                 saved.getAddress(),
                 saved.getPhoneNumber()
         );
+    }
+
+    public UserResponseDTO login(UserRole userRole, UserDTO userDTO){
+
+        return
     }
 
     public User getUserById(UUID id) {

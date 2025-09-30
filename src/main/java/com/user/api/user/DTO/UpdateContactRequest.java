@@ -1,4 +1,4 @@
-package com.user.api.user;
+package com.user.api.user.DTO;
 
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;

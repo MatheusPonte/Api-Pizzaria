@@ -1,5 +1,9 @@
-package com.user.api.user;
+package com.user.api.user.controller;
 
+import com.user.api.user.DTO.UpdateContactRequest;
+import com.user.api.user.DTO.UserDTO;
+import com.user.api.user.DTO.UserResponseDTO;
+import com.user.api.user.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
