@@ -1,7 +1,7 @@
 package doc;
 
-import com.user.api.user.UserDTO;
-import com.user.api.user.UserResponseDTO;
+import com.user.api.user.DTO.UserDTO;
+import com.user.api.user.DTO.UserResponseDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -14,7 +14,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 
 
-import com.user.api.user.UpdateContactRequest;
+import com.user.api.user.DTO.UpdateContactRequest;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
 

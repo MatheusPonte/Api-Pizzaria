@@ -1,13 +1,14 @@
-package com.user.api.user;
+package com.user.api.user.entity;
 
 import com.user.api.auth.Auth;
+import com.user.api.user.DTO.UserDTO;
+import com.user.api.user.enums.UserRole;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.boot.autoconfigure.web.WebProperties;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

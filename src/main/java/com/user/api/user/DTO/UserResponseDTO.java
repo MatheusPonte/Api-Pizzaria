@@ -1,4 +1,4 @@
-package com.user.api.user;
+package com.user.api.user.DTO;
 
 public record UserResponseDTO<UUID>(
         UUID userId,
